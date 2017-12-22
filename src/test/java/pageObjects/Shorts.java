@@ -14,5 +14,7 @@ public class Shorts extends Root {
         System.out.println(element);
     }
 
-    public static WebElement let(By locator) {return driver.findElement(locator);}
+    public static WebElement let(By locator) {
+        return driver.findElement(locator);
+    }
 }

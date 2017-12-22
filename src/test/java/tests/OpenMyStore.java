@@ -9,6 +9,7 @@ public class OpenMyStore extends Shorts {
     @Test
     public void openSite() {
         openMainMenu();
+
         Assert.assertEquals(driver.getTitle(), "My Store");
     }
 }
