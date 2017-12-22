@@ -15,8 +15,7 @@ public class Buttons extends Root {
     }
 
     public static WebElement let(By locator) {
-        WebElement Element = driver.findElement(locator);
-        return Element;
+        return driver.findElement(locator);
     }
 
     public static By searchField() {
@@ -34,6 +33,4 @@ public class Buttons extends Root {
     public static By registerBttn() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button");
     }
-
-
 }
