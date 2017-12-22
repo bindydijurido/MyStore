@@ -21,20 +21,20 @@ public class CreateAccountFunctionality extends Root {
         actions.CreateAccount.registerUser();
         wait.until(ExpectedConditions.visibilityOf(let(RegistrationForms.firstNameForm())));
 
-        Assert.assertEquals(let(yourPersonalInfo()).getText().toString(), "YOUR PERSONAL INFORMATION");
+        Assert.assertEquals(let(yourPersonalInfo()).getText(), "YOUR PERSONAL INFORMATION");
     }
 
     @Test
-    public void fillPersonalInfo() throws InterruptedException {
+    public void fillPersonalInfo() {
 
         actions.CreateAccount.registerUser();
         actions.FillRegistrationForm
                 .fillPersonalInformation(true, true, true, "Jan", "Kowalski", "test1234", "23", "January", "1998");
         actions.FillRegistrationForm
-                .fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345", "United " + "States",
+                .fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345", "United States",
                              "additionalInfo", "513513513", "513513513", "513513513");
         let(pageObjects.Buttons.registerBttn()).click();
 
-        Assert.assertEquals(driver.getTitle().toString(), "My account - My Store");
+        Assert.assertEquals(driver.getTitle(), "My account - My Store");
     }
 }
