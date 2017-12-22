@@ -9,7 +9,7 @@ public class FillRegistrationForm extends Shorts {
     public static void fillPersonalInformation(boolean Mr, boolean singNewsletter, boolean signSpecialOffers,
                                                String firstName, String lastName, String psswd, String birthDay,
                                                String birthMonth, String birthYear) {
-        if (Mr == true) {
+        if (Mr) {
             let(titleMrRadioBttn()).click();
         } else {
             let(titleMrsRadioBttn()).click();
@@ -22,11 +22,11 @@ public class FillRegistrationForm extends Shorts {
         let(dateOfBirthMonth()).sendKeys(birthMonth);
         let(dateOfBirthYear()).sendKeys(String.valueOf(birthYear));
 
-        if (singNewsletter == true) {
+        if (singNewsletter) {
             let(singUpNewsletter()).click();
         }
 
-        if (signSpecialOffers == true) {
+        if (signSpecialOffers) {
             let(receiveOfferts()).click();
         }
     }
@@ -49,7 +49,5 @@ public class FillRegistrationForm extends Shorts {
         let(futureReference()).clear();
         let(futureReference()).sendKeys(futureReference);
     }
-
-
 }
 
