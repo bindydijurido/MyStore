@@ -6,7 +6,7 @@ import utility.Root;
 
 public class Shorts extends Root {
 
-    public static void openMainMenu() {
+    protected static void openMainMenu() {
         driver.get("http://automationpractice.com/index.php");
     }
 
@@ -14,8 +14,5 @@ public class Shorts extends Root {
         System.out.println(element);
     }
 
-    public static WebElement let(By locator) {
-        WebElement Element = driver.findElement(locator);
-        return Element;
-    }
+    public static WebElement let(By locator) {return driver.findElement(locator);}
 }

@@ -28,12 +28,11 @@ public class CreateAccountFunctionality extends Root {
     public void fillPersonalInfo() {
 
         actions.CreateAccount.registerUser();
-        actions.FillRegistrationForm
-                .fillPersonalInformation(true, true, true, "Jan", "Kowalski", "test1234", "23",
-                        "January", "1998");
-        actions.FillRegistrationForm
-                .fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345",
-                        "United States", "additionalInfo", "513513513", "513513513", "513513513");
+        actions.FillRegistrationForm.fillPersonalInformation(true, true, true, "Jan", "Kowalski", "test1234", "23",
+                                                             "January", "1998");
+        actions.FillRegistrationForm.fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345",
+                                                 "United States", "additionalInfo", "513513513", "513513513",
+                                                 "513513513");
         let(pageObjects.Buttons.registerBttn()).click();
 
         Assert.assertEquals(driver.getTitle(), "My account - My Store");
