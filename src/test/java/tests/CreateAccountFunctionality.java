@@ -31,7 +31,8 @@ public class CreateAccountFunctionality extends Root {
         actions.CreateAccount.repeatUserLogin();
 
         Assert.assertEquals(let(RegistrationForms.createAccountError()).getText(),
-                            "An account using this email " + "address has already been registered. Please enter a " + "valid password or request a new one.");
+                            "An account using this email address has already been registered. Please enter a valid " +
+                                    "password or request a " + "" + "" + "new one.");
 
     }
 
@@ -39,9 +40,26 @@ public class CreateAccountFunctionality extends Root {
     public void fillPersonalInfo() {
 
         actions.CreateAccount.registerUser();
-        actions.FillRegistrationForm.fillPersonalInformation(true, true, true, "Jan", "Kowalski", "test1234", "23", "January", "1998");
-        actions.FillRegistrationForm.fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345", "United States", "additionalInfo", "513513513",
-                                                 "513513513", "513513513");
+        actions.FillRegistrationForm.fillPersonalInformation(true,
+                                                             true,
+                                                             true,
+                                                             "Jan",
+                                                             "Kowalski",
+                                                             "test1234",
+                                                             "23",
+                                                             "January",
+                                                             "1998");
+        actions.FillRegistrationForm.fillAddress("Firma",
+                                                 "Testowa",
+                                                 "22",
+                                                 "Warsaw",
+                                                 "Alabama",
+                                                 "12345",
+                                                 "United States",
+                                                 "additionalInfo",
+                                                 "513513513",
+                                                 "513513513",
+                                                 "513513513");
         let(pageObjects.Buttons.registerBttn()).click();
 
         Assert.assertEquals(driver.getTitle(), "My account - My Store");
@@ -53,14 +71,16 @@ public class CreateAccountFunctionality extends Root {
         actions.CreateAccount.registerUser();
         let(pageObjects.Buttons.registerBttn()).click();
 
-        Assert.assertEquals(let(RegistrationForms.lackOfPhoneNr()).getText(), "You must register at least one phone " + "number.");
+        Assert.assertEquals(let(RegistrationForms.lackOfPhoneNr()).getText(),
+                            "You must register at least one phone " + "number.");
         Assert.assertEquals(let(RegistrationForms.lackOfLastName()).getText(), "lastname is required.");
         Assert.assertEquals(let(RegistrationForms.lackOfFirstName()).getText(), "firstname is required.");
         Assert.assertEquals(let(RegistrationForms.lackOfPsswd()).getText(), "passwd is required.");
         Assert.assertEquals(let(RegistrationForms.lackOfAddress()).getText(), "address1 is required.");
         Assert.assertEquals(let(RegistrationForms.lackOfCity()).getText(), "city is required.");
         Assert.assertEquals(let(RegistrationForms.lackOfZip()).getText(),
-                            "The Zip/Postal code you've entered is " + "invalid. " + "It must follow this format: " + "00000");
-        Assert.assertEquals(let(RegistrationForms.lackOfState()).getText(), "This country requires you to choose a State.");
+                            "The Zip/Postal code you've entered is invalid. It must follow this format: 00000");
+        Assert.assertEquals(let(RegistrationForms.lackOfState()).getText(),
+                            "This country requires you to choose a State.");
     }
 }
