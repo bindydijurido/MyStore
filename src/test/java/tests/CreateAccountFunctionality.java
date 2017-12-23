@@ -32,7 +32,7 @@ public class CreateAccountFunctionality extends Root {
 
         Assert.assertEquals(let(RegistrationForms.createAccountError()).getText(),
                             "An account using this email address has already been registered. Please enter a valid " +
-                                    "password or request a " + "" + "" + "new one.");
+                                    "password or request a new one.");
 
     }
 
