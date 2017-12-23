@@ -22,4 +22,11 @@ public class CreateAccount extends Shorts {
         let(emailAddressField()).sendKeys("test" + timeStamp + "@gmail.com");
         let(createAccountBttn()).click();
     }
+
+    public static void repeatUserLogin() {
+        openMainMenu();
+        let(singInButton()).click();
+        let(emailAddressField()).sendKeys("test@gmail.com");
+        let(createAccountBttn()).click();
+    }
 }

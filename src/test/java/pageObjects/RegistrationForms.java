@@ -105,5 +105,41 @@ public class RegistrationForms extends Root {
     public static By futureReference() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[2]/p[14]/input");
     }
+
+    public static By createAccountError() {
+        return By.xpath(".//*[@id='create_account_error']/ol/li");
+    }
+
+    public static By lackOfPhoneNr() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[1]");
+    }
+
+    public static By lackOfLastName() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[2]");
+    }
+
+    public static By lackOfFirstName() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[3]");
+    }
+
+    public static By lackOfPsswd() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[4]");
+    }
+
+    public static By lackOfAddress() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[5]");
+    }
+
+    public static By lackOfCity() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[6]");
+    }
+
+    public static By lackOfZip() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[7]");
+    }
+
+    public static By lackOfState() {
+        return By.xpath(".//*[@id='center_column']/div/ol/li[8]");
+    }
 }
 

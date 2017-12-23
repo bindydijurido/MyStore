@@ -25,4 +25,3 @@ public class Fields extends Root {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[2]/input");
     }
 }
-
