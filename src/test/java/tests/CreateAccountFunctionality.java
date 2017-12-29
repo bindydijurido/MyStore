@@ -9,8 +9,6 @@ import utility.Root;
 
 import static pageObjects.Headers.yourPersonalInfo;
 import static pageObjects.Shorts.let;
-import static storage.Variables.ACCOUNT_PSSWD;
-
 
 public class CreateAccountFunctionality extends Root {
 
@@ -19,7 +17,7 @@ public class CreateAccountFunctionality extends Root {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        actions.CreateAccount.registerUser();
+        actions.CreateAccount.registerUser(storage.Variables.getUniqueAccountName());
         wait.until(ExpectedConditions.visibilityOf(let(RegistrationForms.firstNameForm())));
 
         Assert.assertEquals(let(yourPersonalInfo()).getText(), "YOUR PERSONAL INFORMATION");
@@ -39,21 +37,14 @@ public class CreateAccountFunctionality extends Root {
     @Test
     public void fillPersonalInfo() {
 
-        actions.CreateAccount.registerUser();
-        actions.FillRegistrationForm
-                .fillPersonalInformation(true, true, true, "Jan", "Kowalski", ACCOUNT_PSSWD, "23", "January", "1998");
-        actions.FillRegistrationForm
-                .fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345", "United States", "additionalInfo",
-                             "513513513", "513513513", "513513513");
-        let(pageObjects.Buttons.registerBttn()).click();
-
+        actions.CreateAccount.createAccount(storage.Variables.getUniqueAccountName());
         Assert.assertEquals(driver.getTitle(), "My account - My Store");
     }
 
     @Test
     public void checkRegistrationFormAlerts() {
 
-        actions.CreateAccount.registerUser();
+        actions.CreateAccount.registerUser(storage.Variables.getUniqueAccountName());
         let(pageObjects.Buttons.registerBttn()).click();
 
         Assert.assertEquals(let(RegistrationForms.lackOfPhoneNr()).getText(),
