@@ -6,7 +6,7 @@ import utility.Root;
 
 public class Shorts extends Root {
 
-    protected static void openMainMenu() {
+    public static void openMainMenu() {
         driver.get("http://automationpractice.com/index.php");
     }
 

@@ -6,15 +6,9 @@ import static pageObjects.RegistrationForms.*;
 
 public class FillRegistrationForm extends Shorts {
 
-    public static void fillPersonalInformation(boolean Mr,
-                                               boolean singNewsletter,
-                                               boolean signSpecialOffers,
-                                               String firstName,
-                                               String lastName,
-                                               String psswd,
-                                               String birthDay,
-                                               String birthMonth,
-                                               String birthYear) {
+    public static void fillPersonalInformation(boolean Mr, boolean singNewsletter, boolean signSpecialOffers,
+                                               String firstName, String lastName, String psswd, String birthDay,
+                                               String birthMonth, String birthYear) {
         if (Mr) {
             let(titleMrRadioBttn()).click();
         } else {
@@ -37,16 +31,9 @@ public class FillRegistrationForm extends Shorts {
         }
     }
 
-    public static void fillAddress(String companyName,
-                                   String customersAddress,
-                                   String customersAddressSecLine,
-                                   String customersCity,
-                                   String customersState,
-                                   String customersZipPost,
-                                   String customersCountry,
-                                   String additionalInfo,
-                                   String homePhone,
-                                   String mobilePhone,
+    public static void fillAddress(String companyName, String customersAddress, String customersAddressSecLine,
+                                   String customersCity, String customersState, String customersZipPost,
+                                   String customersCountry, String additionalInfo, String homePhone, String mobilePhone,
                                    String futureReference) {
 
         let(companyName()).sendKeys(companyName);

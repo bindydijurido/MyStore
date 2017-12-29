@@ -9,7 +9,7 @@ import utility.Root;
 
 import static pageObjects.Headers.yourPersonalInfo;
 import static pageObjects.Shorts.let;
-import static pageObjects.Shorts.log;
+import static storage.Variables.ACCOUNT_PSSWD;
 
 
 public class CreateAccountFunctionality extends Root {
@@ -31,8 +31,8 @@ public class CreateAccountFunctionality extends Root {
         actions.CreateAccount.repeatUserLogin();
 
         Assert.assertEquals(let(RegistrationForms.createAccountError()).getText(),
-                            "An account using this email address has already been registered. Please enter a valid " +
-                                    "password or request a new one.");
+                            "An account using this email address has already been registered. Please enter a valid "
+                                    + "password or request a new one.");
 
     }
 
@@ -40,26 +40,11 @@ public class CreateAccountFunctionality extends Root {
     public void fillPersonalInfo() {
 
         actions.CreateAccount.registerUser();
-        actions.FillRegistrationForm.fillPersonalInformation(true,
-                                                             true,
-                                                             true,
-                                                             "Jan",
-                                                             "Kowalski",
-                                                             "test1234",
-                                                             "23",
-                                                             "January",
-                                                             "1998");
-        actions.FillRegistrationForm.fillAddress("Firma",
-                                                 "Testowa",
-                                                 "22",
-                                                 "Warsaw",
-                                                 "Alabama",
-                                                 "12345",
-                                                 "United States",
-                                                 "additionalInfo",
-                                                 "513513513",
-                                                 "513513513",
-                                                 "513513513");
+        actions.FillRegistrationForm
+                .fillPersonalInformation(true, true, true, "Jan", "Kowalski", ACCOUNT_PSSWD, "23", "January", "1998");
+        actions.FillRegistrationForm
+                .fillAddress("Firma", "Testowa", "22", "Warsaw", "Alabama", "12345", "United States", "additionalInfo",
+                             "513513513", "513513513", "513513513");
         let(pageObjects.Buttons.registerBttn()).click();
 
         Assert.assertEquals(driver.getTitle(), "My account - My Store");

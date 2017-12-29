@@ -17,4 +17,8 @@ public class Buttons extends Root {
     public static By registerBttn() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button");
     }
+
+    public static By signInBttn() {
+        return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/div[2]/form/div/p[2]/button");
+    }
 }
