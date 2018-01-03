@@ -13,19 +13,15 @@ import static storage.Variables.ACCOUNT_PSSWD;
 
 public class LoginAccountFunctionality extends Shorts {
 
-    private String accountName = storage.Variables.getUniqueAccountName();
+    private final String accountName = storage.Variables.getUniqueAccountName();
 
     @Test
     public void loginIntoExistsAccount() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-
         actions.CreateAccount.createAccount(accountName);
         let(Buttons.signOutBttn()).click();
-
         actions.LoginIntoAccount.loginUser(accountName, ACCOUNT_PSSWD);
 
-        wait.until(ExpectedConditions.visibilityOf(let(orderHistoryBttn())));
         Assert.assertEquals(let(userHeader()).getText(), "Jan Kowalski");
 
         log("Test result: OK. Login: " + accountName + ", Password: " + ACCOUNT_PSSWD);
