@@ -21,6 +21,10 @@ public class Fields extends Root {
         return By.xpath("html/body/div[1]/div[1]/header/div[2]/div/div/nav/div[1]/a");
     }
 
+    public static By logInButton() {
+        return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/div[2]/form/div/p[2]/button");
+    }
+
     public static By emailAddressField() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[2]/input");
     }

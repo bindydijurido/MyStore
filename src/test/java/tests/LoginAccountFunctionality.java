@@ -22,6 +22,7 @@ public class LoginAccountFunctionality extends Shorts {
 
         actions.CreateAccount.createAccount(accountName);
         let(Buttons.signOutBttn()).click();
+
         actions.LoginIntoAccount.loginUser(accountName, ACCOUNT_PSSWD);
 
         wait.until(ExpectedConditions.visibilityOf(let(orderHistoryBttn())));
