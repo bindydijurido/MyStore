@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import pageObjects.Shorts;
 import pageObjects.URLs;
+import utility.Root;
 
 public class CheckURLs extends Shorts {
 

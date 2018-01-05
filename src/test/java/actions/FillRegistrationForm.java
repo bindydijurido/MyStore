@@ -1,6 +1,7 @@
 package actions;
 
 import pageObjects.Shorts;
+import utility.Root;
 
 import static pageObjects.RegistrationForms.*;
 
