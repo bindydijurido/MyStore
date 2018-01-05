@@ -26,10 +26,6 @@ public class RegistrationForms extends Root {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[3]/input");
     }
 
-    public static By emailForm() {
-        return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[4]/input");
-    }
-
     public static By psswrdForm() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[5]/input");
     }
@@ -52,14 +48,6 @@ public class RegistrationForms extends Root {
 
     public static By receiveOfferts() {
         return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[8]/div/span/input");
-    }
-
-    public static By firstName() {
-        return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[2]/p[1]/input");
-    }
-
-    public static By lastName() {
-        return By.xpath("html/body/div[1]/div[2]/div/div[3]/div/div/form/div[2]/p[2]/input");
     }
 
     public static By companyName() {

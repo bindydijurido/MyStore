@@ -1,10 +1,11 @@
 package actions;
 
 import pageObjects.Shorts;
+import utility.Root;
 
 import static pageObjects.RegistrationForms.*;
 
-public class FillRegistrationForm extends Shorts {
+class FillRegistrationForm extends Shorts {
 
     public static void fillPersonalInformation(boolean Mr, boolean singNewsletter, boolean signSpecialOffers,
                                                String firstName, String lastName, String psswd, String birthDay,

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class Root {
 
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
     @Before
     public void setUpBeforeClass() {
