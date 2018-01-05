@@ -1,13 +1,10 @@
-package tests;
+package jUnitTests;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.Buttons;
 import pageObjects.Shorts;
 
-import static pageObjects.Buttons.orderHistoryBttn;
 import static pageObjects.Headers.userHeader;
 import static storage.Variables.ACCOUNT_PSSWD;
 

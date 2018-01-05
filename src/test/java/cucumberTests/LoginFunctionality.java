@@ -1,12 +1,9 @@
-package tests;
+package cucumberTests;
 
 import actions.LoginIntoAccount;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import pageObjects.Buttons;
 import pageObjects.Shorts;
 
 import static actions.CreateAccount.createAccount;
