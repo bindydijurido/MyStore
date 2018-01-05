@@ -16,7 +16,7 @@ public class LoginAccountFunctionality extends Shorts {
     private final String accountName = storage.Variables.getUniqueAccountName();
 
     @Test
-    public void loginIntoExistsAccount() {
+    public void logIntoExistsAccount() {
 
         actions.CreateAccount.createAccount(accountName);
         let(Buttons.signOutBttn()).click();
